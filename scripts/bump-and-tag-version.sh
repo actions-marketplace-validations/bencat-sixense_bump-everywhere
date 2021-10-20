@@ -32,7 +32,7 @@ tag_and_push() {
 
 increase_patch_version() {
     local -r version="$1"
-    local -r version_bits=("${version//./ }") # Replace . with space so can split into an array
+    local -r version_bits=(${version//./ }) # Replace . with space so can split into an array
     local -r major=${version_bits[0]}
     local -r minor=${version_bits[1]}
     local patch=${version_bits[2]}
@@ -65,7 +65,7 @@ is_latest_commit_tagged() {
 main() {
     if ! repository_has_any_tags; then
         echo "No tag is present in the repository."
-        tag_and_push $DEFAULT_VERSION
+        tag_and_push "$DEFAULT_VERSION"
         exit 0
     fi
     if is_latest_commit_tagged; then
