@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.3 (2021-10-20)
+
+* ci: update action name | [0de2b95](https://github.com/bencat-sixense/bump-everywhere/commit/0de2b951730ac70ab0052dfab6a16dfe83d6ec2e)
+* fix: refix | [4b5164d](https://github.com/bencat-sixense/bump-everywhere/commit/4b5164d997af4ae1961888a9ea2b8f932dc827fe)
+
+[compare](https://github.com/bencat-sixense/bump-everywhere/compare/1.3.2...1.3.3)
+
 ## 1.3.2 (2021-10-20)
 
 * fix: envar + disable | [cc7585a](https://github.com/bencat-sixense/bump-everywhere/commit/cc7585a5c480740832e63f604e462f864b05e059)
