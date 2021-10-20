@@ -3,7 +3,7 @@
 # Bumps version, creates changelog and creates a release
 # Example usage:
 #   bash "scripts/bump-everywhere.sh" \
-#      --repository "undergroundwires/privacy.sexy" \
+#      --repository "bencat-sixense/privacy.sexy" \
 #      --user "bot-commiter-name" \
 #      --git-token "PAT_TOKEN" \
 #      --release-token "PAT_TOKEN"
@@ -162,7 +162,7 @@ main() {
   validate_parameters "$repository" "$git_user" "$git_token" "$release_type" "$release_token" "$commit_message"
   print_name
   clone "$repository" "$git_token"
-  if is_rerun "$commit_message"; then 
+  if is_rerun "$commit_message"; then
     echo "It's a re-run of the script, versioning will be skipped";
   else
     configure_credentials "$repository" "$git_token" "$git_user"

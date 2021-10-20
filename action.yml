@@ -1,8 +1,8 @@
 name: bump-everywhere
-description: Bump git tag to the next version, generate a changelog file, and create a release with auto-generated release notes
+description: Bump git tag to the next version, generate a changelog file, and create a release with auto-generated release notes [Forked]
 inputs:
   repository:
-    description: Repository name with owner to bump & release. For example, undergroundwires/bump-everywhere
+    description: Repository name with owner to bump & release. For example, bencat-sixense/bump-everywhere
     required: false
     default: ${{ github.repository }}
   user:
@@ -36,5 +36,5 @@ runs:
     - --release-token ${{ inputs.release-token }}
     - --commit-message ${{ inputs.commit-message }}
 branding:
-  icon: 'arrow-up'  
+  icon: 'arrow-up'
   color: 'yellow'

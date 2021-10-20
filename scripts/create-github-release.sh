@@ -3,7 +3,7 @@
 # Creates the release with the latest tag if any release does not already exists
 # Example usage:
 #   bash "create-github-release.sh" \
-#    --repository "undergroundwires/privacy.sexy" \
+#    --repository "bencat-sixense/privacy.sexy" \
 #    --type "draft" \
 #    --token "YOUR_SECRET_PAT"
 # Prerequisites:
@@ -52,7 +52,7 @@ release_exists() {
 
 print_release_notes() {
     local -r version="$1" repository="$2"
-    if has_single_version; then 
+    if has_single_version; then
         echo "Initial release"
         return 0
     fi

@@ -65,7 +65,7 @@ is_latest_commit_tagged() {
 main() {
     if ! repository_has_any_tags; then
         echo "No tag is present in the repository."
-        tag_and_push "$DEFAULT_VERSION"
+        tag_and_push $DEFAULT_VERSION
         exit 0
     fi
     if is_latest_commit_tagged; then

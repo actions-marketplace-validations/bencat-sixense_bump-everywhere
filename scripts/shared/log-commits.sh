@@ -5,7 +5,7 @@
 #   bash "log-commits.sh" \
 #    --current "0.1.1" \
 #    --previous "0.1.0" \
-#    --repository "undergroundwires/bump-everywhere" > list.md
+#    --repository "bencat-sixense/bump-everywhere" > list.md
 # Prerequisites:
 #   - Ensure your current folder is the repository root
 #   - If you query with tags, ensure all tags are fetched
