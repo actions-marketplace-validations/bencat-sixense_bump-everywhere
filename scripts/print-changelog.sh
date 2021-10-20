@@ -3,7 +3,7 @@
 # Writes changelog in markdown format to std out.
 # Example usage:
 #   local changelog
-#   if ! changelog=$(bash "print-changelog.sh" --repository "undergroundwires/privacy.sexy"); then
+#   if ! changelog=$(bash "print-changelog.sh" --repository "bencat-sixense/privacy.sexy"); then
 #     echo "Could not create changelog"
 #   fi
 # Prerequisites:
