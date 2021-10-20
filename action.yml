@@ -1,4 +1,4 @@
-name: bump-everywhere
+name: forked-bump-everywhere
 description: Bump git tag to the next version, generate a changelog file, and create a release with auto-generated release notes [Forked]
 inputs:
   repository:
