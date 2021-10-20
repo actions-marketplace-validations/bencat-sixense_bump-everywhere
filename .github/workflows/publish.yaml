@@ -13,15 +13,15 @@ jobs:
         with:
           ref: master # otherwise it defaults to the version tag missing bump commit
           fetch-depth: 0 # fetch all history
-      - name: Checkout to bump commit
-        run: git checkout "$(git rev-list "${{ github.event.release.tag_name }}"..master | tail -1)"
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-          registry-url: https://registry.npmjs.org/
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Checkout to bump commit
+      #   run: git checkout "$(git rev-list "${{ github.event.release.tag_name }}"..master | tail -1)"
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 14.x
+      #     registry-url: https://registry.npmjs.org/
+      # - run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   publish-docker:
     name: Push Docker image to Docker Hub
@@ -31,17 +31,17 @@ jobs:
         with:
           ref: master # otherwise it defaults to the version tag missing bump commit
           fetch-depth: 0 # fetch all history
-      - name: Checkout to bump commit
-        run: git checkout "$(git rev-list "${{ github.event.release.tag_name }}"..master | tail -1)"
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-          registry-url: https://registry.npmjs.org/
-      - name: Push to Docker Hub
-        uses: docker/build-push-action@v1
-        with:
-          username: bencat-sixense
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: bencat-sixense/bump-everywhere
-          tag_with_ref: true
-          tags: latest
+      # - name: Checkout to bump commit
+      #   run: git checkout "$(git rev-list "${{ github.event.release.tag_name }}"..master | tail -1)"
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 14.x
+      #     registry-url: https://registry.npmjs.org/
+      # - name: Push to Docker Hub
+      #   uses: docker/build-push-action@v1
+      #   with:
+      #     username: bencat-sixense
+      #     password: ${{ secrets.DOCKER_PASSWORD }}
+      #     repository: bencat-sixense/bump-everywhere
+      #     tag_with_ref: true
+      #     tags: latest
